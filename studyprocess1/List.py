@@ -1,0 +1,26 @@
+name_list=["a","b","f","c","f","d"]
+name1_list=["q","w"]
+name_list.insert(1,"e")
+name_list.append("r")
+name_list.extend(name1_list)
+#print(name_list)
+name1_list[0]=22
+del name1_list[1]
+name_list.remove("a")
+print(name_list)
+name_list.pop()
+name_list.pop(3)
+name1_list.clear()
+list_len=len(name_list)
+print(name_list)
+countf=name_list.count("f")
+print(countf)
+name_list.sort()
+name_list.sort(reverse=False)
+name_list.sort(reverse=True)
+print(name_list)
+name_list.sort()
+name_list.reverse()
+print(list_len)
+print(name_list)
+print(name1_list)
