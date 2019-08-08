@@ -1,0 +1,24 @@
+def curve_pre():
+    a = 25
+    def curve(x):  # 一切皆变量，函数也是对象，可以嵌套
+        return a * x * x
+    return curve  # 闭包 = 函数 + 环境变量
+
+a = 10
+f = curve_pre()
+f (2)
+print(f(2))
+print(f)
+print(f.__closure__)
+
+
+b = 25  # 闭包环境变量必须在函数调用时的现场，不是外界变量
+def curve_pre1():
+    def curve1(x):
+        return b * x *x
+    return curve1
+
+b = 10  # 外界变量改变可以改变函数
+f1 = curve_pre1()
+f1(2)
+print(f1(2))
